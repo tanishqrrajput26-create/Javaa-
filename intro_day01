@@ -10,7 +10,6 @@ Converts bytecode into native code.
 Performs memory management.
 Native code is directly understood by the OS.
 
-
 2) JRE (Java Runtime Environment)
 Contains:
 JVM
