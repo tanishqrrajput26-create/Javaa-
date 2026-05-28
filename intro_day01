@@ -1,3 +1,372 @@
 Java is a widely used, high-level, object-oriented programming language.
 Famous for its "write once, run anywhere" philosophy.
-Java code is compiled into bytecode that can run on any device equipped with a Java Virtual Machine (JVM). 
+Java code is compiled into bytecode that can run on any device equipped with a Java Virtual Machine (JVM).
+
+Java Notes (Organized Text Version)
+JVM, JRE, JDK
+
+1) JVM (Java Virtual Machine)
+Converts bytecode into native code.
+Performs memory management.
+Native code is directly understood by the OS.
+
+
+2) JRE (Java Runtime Environment)
+Contains:
+JVM
+Standard Java Libraries
+Java API
+
+3) JDK (Java Development Kit)
+Contains:
+JRE
+Java Compiler
+Java Runner
+Debugger
+
+Features of Java
+1) Simple
+Java is simple because:
+Pointers are not directly used like in C/C++.
+Memory management is done by JVM rather than the programmer.
+Helps avoid memory leaks.
+
+Memory Areas
+Stack Frame → Limited memory.
+Heap → Borrowed from OS.
+In C/C++
+malloc() → allocates memory in heap.
+free() → returns memory back to heap.
+
+In Java new keyword allocates memory in heap.
+No need for delete.
+
+2) Object Oriented
+a) Abstraction
+Hiding implementation details of a process.
+User can still use it.
+
+b) Encapsulation
+Used to keep data together.
+Protects data from the outside world.
+Basis of Encapsulation
+1. Class Definition
+2. Access Specifiers
+Public
+Private
+Protected
+Default
+
+3. Scope
+Scope Rule
+Outer scope cannot access inner scope directly.
+Inner scope can access outer scope.
+Example:
+“Seeing people from a building, but they cannot see you.”
+
+c) Inheritance
+One class inherits features of another class.
+Helps reduce repeated code.
+Subclass can use features of superclass.
+
+d) Polymorphism
+One name with different meanings.
+
+Example:
+Same function name works differently for different data types.
+
+Example in Java:
+Math.abs(int)
+Math.abs(long)
+Math.fabs(float)
+
+3) Robust (Reliable)
+In C/C++
+int no;
+printf("%d", no);
+Prints garbage value.
+In Java
+Gives error if variable is not initialized.
+Integer values are not defaulted randomly.
+
+4) Distributed
+One server can host thousands of websites.
+Clients can access from all over the world.
+If one server is busy, request can be redirected to another server.
+Networking
+Uses:
+
+Networking protocols
+
+java.net
+
+5) Secured
+
+JRE ensures applications do not directly access hardware or OS.
+
+Protects against viruses and unsafe operations.
+
+6) Multithreading
+
+Multiple tasks can run simultaneously.
+7) Portable
+
+“Write Once, Run Anywhere.”
+
+Class and Object Example
+
+Design a Class Circle
+
+Properties:
+
+Radius
+
+Coordinates
+
+Colour
+
+
+Methods:
+
+Calculate Area
+
+Calculate Circumference
+
+Display Details
+
+
+
+---
+
+Circle Class
+
+Attributes
+
+Attributes should help distinguish objects from each other.
+
+class Circle
+{
+    int r, x, y;
+    String colour;
+}
+
+
+---
+
+Methods
+
+Area Method
+
+genui{"math_block_widget_always_prefetch_v2":{"content":"A = \\pi r^2"}}double area()
+{
+    return 3.14 * r * r;
+}
+
+
+---
+
+Circumference Method
+
+genui{"math_block_widget_always_prefetch_v2":{"content":"C = 2\\pi r"}}double circumference()
+{
+    return 2 * 3.14 * r;
+}
+
+
+---
+
+Executable Class
+
+class prog1
+{
+    public static void main(String args[])
+    {
+        Circle c1 = new Circle();
+
+        c1.x = 100;
+        c1.y = 200;
+        c1.r = 10;
+
+        System.out.println("Coords of center of c1 are "
+                           + c1.x + " and " + c1.y);
+
+        double ac = c1.area();
+        double cc = c1.circumference();
+
+        System.out.println("Area of c1 is " + ac);
+
+        System.out.println("Circumference of c1 is " + cc);
+
+        Circle c2 = new Circle();
+
+        System.out.println("Coords of center of c2 are "
+                           + c2.x + " and " + c2.y);
+    }
+}
+
+
+---
+
+Problems in Above Design
+
+This code works but is considered poor design because:
+
+1. Main method becomes complicated.
+
+
+2. OOP principle says:
+
+Attributes/Data members should be private.
+
+Methods should be public.
+
+
+
+3. Repeated method calls increase memory usage.
+
+
+
+
+---
+
+Rectangle Class Example
+
+Rectangle Class
+
+class Rectangle
+{
+    private int length, breadth;
+}
+
+Why Private?
+
+Variables cannot be accessed directly from main().
+
+
+
+---
+
+Setter and Getter Methods
+
+Setter Method
+
+Used to initialize object fields.
+
+Takes arguments.
+
+
+public void setDim(int l, int b)
+{
+    length = l;
+    breadth = b;
+}
+
+
+---
+
+Getter Methods
+
+Non-void methods.
+
+Return values.
+
+Usually do not take arguments.
+
+Operate on object data.
+
+
+
+---
+
+Area Method
+
+A = l \times b
+
+public int getArea()
+{
+    return length * breadth;
+}
+
+
+---
+
+Perimeter Method
+
+P = 2(l+b)
+
+public int getPerimeter()
+{
+    return 2 * (length + breadth);
+}
+
+
+---
+
+Executable Class for Rectangle
+
+Notes
+
+One Java file can contain multiple classes.
+
+Only one class can be public.
+
+Java file name should be same as public class name.
+
+
+
+---
+
+public class prog2
+{
+    public static void main(String args[])
+    {
+        Rectangle r1 = new Rectangle();
+
+        // r1.length = 20;   // Error because variable is private
+
+        r1.setDim(20, 10);
+
+        System.out.println(
+            "Area of rectangle r1 is "
+            + r1.getArea()
+        );
+
+        System.out.println(
+            "Perimeter of rectangle r1 is "
+            + r1.getPerimeter()
+        );
+    }
+}
+
+
+---
+
+Important Notes
+
+Objects
+
+Objects are created in runtime.
+
+
+new Keyword
+
+Allocates memory for objects in heap memory.
+
+
+Nested Method Call
+
+Example:
+
+System.out.println(r1.getArea());
+
+
+---
+
+Summary of OOP Concepts
+
+Concept	Meaning
+
+Abstraction	Hiding implementation details
+Encapsulation	Wrapping data and methods together
+Inheritance	Reusing features from another class
+Polymorphism	One name, many forms
