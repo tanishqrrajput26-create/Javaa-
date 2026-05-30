@@ -133,10 +133,6 @@ Calculate Circumference
 
 Display Details
 
-
-
----
-
 Circle Class
 
 Attributes
@@ -149,9 +145,6 @@ class Circle
     String colour;
 }
 
-
----
-
 Methods
 
 Area Method
@@ -161,8 +154,6 @@ Area Method
     return 3.14 * r * r;
 }
 
-
----
 
 Circumference Method
 
