@@ -300,8 +300,6 @@ Java file name should be same as public class name.
 
 
 
----
-
 public class prog2
 {
     public static void main(String args[])
