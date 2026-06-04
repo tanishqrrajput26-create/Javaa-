@@ -283,9 +283,6 @@ public int getPerimeter()
     return 2 * (length + breadth);
 }
 
-
----
-
 Executable Class for Rectangle
 
 Notes
