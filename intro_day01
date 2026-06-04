@@ -194,8 +194,6 @@ class prog1
 }
 
 
----
-
 Problems in Above Design
 
 This code works but is considered poor design because:
