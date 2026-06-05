@@ -246,8 +246,6 @@ public void setDim(int l, int b)
 }
 
 
----
-
 Getter Methods
 
 Non-void methods.
@@ -259,9 +257,6 @@ Usually do not take arguments.
 Operate on object data.
 
 
-
----
-
 Area Method
 
 A = l \times b
@@ -271,8 +266,6 @@ public int getArea()
     return length * breadth;
 }
 
-
----
 
 Perimeter Method
 
