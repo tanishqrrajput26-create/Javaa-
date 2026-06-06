@@ -161,9 +161,6 @@ Circumference Method
     return 2 * 3.14 * r;
 }
 
-
----
-
 Executable Class
 
 class prog1
