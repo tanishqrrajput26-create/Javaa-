@@ -144,7 +144,7 @@ class Circle
     String colour;
 }
 
-Methods
+Method
 
 Area Method
 
