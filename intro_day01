@@ -327,9 +327,6 @@ Example:
 
 System.out.println(r1.getArea());
 
-
----
-
 Summary of OOP Concepts
 
 Concept	Meaning
