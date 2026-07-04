@@ -1,2 +1,2 @@
- # Javaa-
-45 days Trainings Java. 
+ # Java 
+3 days Trainings Java. 
